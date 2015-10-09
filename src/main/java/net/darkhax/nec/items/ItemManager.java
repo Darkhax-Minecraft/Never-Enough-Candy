@@ -6,11 +6,13 @@ import java.util.List;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.darkhax.nec.handler.ConfigurationHandler;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.entity.monster.EntityWitch;
 import net.minecraft.entity.passive.EntityBat;
+import net.minecraft.entity.passive.EntityVillager;
 
 public class ItemManager {
     
@@ -19,11 +21,16 @@ public class ItemManager {
     
     public ItemManager() {
         
-        candies.add(new CandyType("batty", 2, 0.05f, EntityBat.class));
-        candies.add(new CandyType("witch", 2, 0.05f, EntityWitch.class));
-        candies.add(new CandyType("spider", 2, 0.05f, EntitySpider.class));
-        candies.add(new CandyType("enderpop", 2, 0.05f, EntityEnderman.class));
-        candies.add(new CandyType("skull", 2, 0.05f, EntitySkeleton.class, true));
+        candies.add(new CandyType("batty", 4, 0.05f, EntityBat.class));
+        candies.add(new CandyType("witch", 4, 0.05f, EntityWitch.class));
+        candies.add(new CandyType("spider", 4, 0.05f, EntitySpider.class));
+        candies.add(new CandyType("enderpop", 4, 0.05f, EntityEnderman.class));
+        candies.add(new CandyType("skull", 4, 0.05f, EntitySkeleton.class, true));
+        candies.add(new CandyType("corn", 4, 1.0f, EntityVillager.class));
+        
+        candies.add(new CandyType("midnight", 2, 0.05f, EntityLiving.class));
+        candies.add(new CandyType("halloween", 2, 0.05f, EntityLiving.class));
+        candies.add(new CandyType("witchy", 2, 0.05f, EntityLiving.class));
         
         for (CandyType type : candies) {
             

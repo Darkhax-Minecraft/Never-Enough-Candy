@@ -7,6 +7,10 @@ item.nec.enderpop.name=Enderpop
 item.nec.skull.name=Gummy Skull
 item.nec.spider.name=Chocolate Spider Eye
 item.nec.witch.name=Bubblegum Witch
+item.nec.halloween.name=Halloween Candy
+item.nec.midnight.name=Midnight Candy
+item.nec.witchy.name=Witchy Candy
+item.nec.corn.name=Candy Corn
 
 #Descriptions
 tooltip.nec.playercookie.description=Baked with love for
@@ -15,3 +19,7 @@ tooltip.nec.enderpop.description=How many licks does it take to get to the cente
 tooltip.nec.skull.description=It's tougher than it looks.
 tooltip.nec.spider.description=It's rather crunchy...
 tooltip.nec.witch.description=The flavor is bewitching!
+tooltip.nec.halloween.description=A festively wrapped candy.
+tooltip.nec.midnight.description=The wrapper sparkles like the midnight sky.
+tooltip.nec.witchy.description=The wrapper resembles a traditional witch.
+tooltip.nec.corn.description=Is Candy Corn a vegetable?
