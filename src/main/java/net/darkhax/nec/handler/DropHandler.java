@@ -20,9 +20,8 @@ public class DropHandler {
         for (CandyType type : ItemManager.candies) {
             
             if (event.entityLiving.getClass().isAssignableFrom(type.entityType))
-                if (Utilities.tryPercentage(type.odds * event.lootingLevel) && type.item != null)
-                    event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(type.item)));
-                    
+                if (Utilities.tryPercentage(type.odds + (0.05f * event.lootingLevel)) && type.item != null)
+                    event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(type.item)));                  
         }
         
         if (event.entityLiving instanceof EntityPlayerMP) {
