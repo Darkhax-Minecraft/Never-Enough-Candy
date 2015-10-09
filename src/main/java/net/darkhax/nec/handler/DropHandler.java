@@ -17,18 +17,15 @@ public class DropHandler {
     @SubscribeEvent
     public void onDropsProcessed (LivingDropsEvent event) {
         
-        for (CandyType type : ItemManager.candies) {
-            
-            if (event.entityLiving.getClass().isAssignableFrom(type.entityType))
+        for (CandyType type : ItemManager.candies)
+            if (type.type.equalsIgnoreCase("any") || Utilities.isSameEntity(type.type, event.entityLiving))
                 if (Utilities.tryPercentage(type.odds + (0.05f * event.lootingLevel)) && type.item != null)
-                    event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(type.item)));                  
-        }
-        
+                    event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(type.item)));
+                    
         if (event.entityLiving instanceof EntityPlayerMP) {
             
             EntityPlayerMP player = (EntityPlayerMP) event.entityLiving;
             
-            System.out.println(player.getCommandSenderName());
             for (Map.Entry<String, ItemPlayerCookie> entry : ItemManager.cookies.entrySet())
                 if (player.getCommandSenderName().equalsIgnoreCase(entry.getKey()))
                     event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(entry.getValue(), 1, 0)));
