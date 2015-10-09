@@ -1,6 +1,7 @@
 package net.darkhax.nec.items;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -14,6 +15,7 @@ import net.minecraft.entity.passive.EntityBat;
 public class ItemManager {
     
     public static List<CandyType> candies = new ArrayList<CandyType>();
+    public static HashMap<String, ItemPlayerCookie> cookies = new HashMap<String, ItemPlayerCookie>();
     
     public ItemManager() {
         
@@ -28,6 +30,15 @@ public class ItemManager {
             ConfigurationHandler.syncType(type);
             type.item = new ItemCandy(type);
             GameRegistry.registerItem(type.item, type.name);
+        }
+        
+        String[] playerNames = new String[] { "darkhax", "lclc98", "stacyplays", "stampylonghead" };
+        
+        for (String name : playerNames) {
+            
+            ItemPlayerCookie cookie = new ItemPlayerCookie(name);
+            GameRegistry.registerItem(cookie, "cookie_" + name);
+            cookies.put(name, cookie);
         }
     }
 }
