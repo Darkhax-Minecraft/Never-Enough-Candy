@@ -12,7 +12,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
-public class DropHandler {
+public class ForgeEventHandler {
     
     @SubscribeEvent
     public void onDropsProcessed (LivingDropsEvent event) {

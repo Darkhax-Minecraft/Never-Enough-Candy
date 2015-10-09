@@ -1,6 +1,7 @@
 #Never Enough Candy English Language File
 
 #Item Names
+item.nec.apple.name=Golden Caramel Apple
 item.nec.bean.name=Darky Park's Every Flavour Bean
 item.nec.cookie.name=Cookie
 item.nec.batty.name=Batty Bar
@@ -14,6 +15,7 @@ item.nec.witchy.name=Witchy Candy
 item.nec.corn.name=Candy Corn
 
 #Descriptions
+tooltip.nec.apple.description=Not even death can stop you from tasting this treat.
 tooltip.nec.bean.description=You want to be careful with these. When they say every flavour, they mean every flavour.
 tooltip.nec.playercookie.description=Baked with love for
 tooltip.nec.batty.description=The taste will drive you batty!

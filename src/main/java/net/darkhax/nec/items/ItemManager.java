@@ -13,6 +13,7 @@ public class ItemManager {
     public static HashMap<String, ItemPlayerCookie> cookies = new HashMap<String, ItemPlayerCookie>();
     
     public static ItemBeans bean = new ItemBeans();
+    // public static ItemCandyApple apple = new ItemCandyApple();
     
     public ItemManager() {
         
@@ -43,6 +44,7 @@ public class ItemManager {
             cookies.put(name, cookie);
         }
         
+        // GameRegistry.registerItem(apple, "apple");
         GameRegistry.registerItem(bean, "bean");
     }
 }

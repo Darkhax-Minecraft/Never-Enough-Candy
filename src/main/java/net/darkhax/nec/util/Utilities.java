@@ -33,7 +33,15 @@ public class Utilities {
     
     public static boolean isSameEntity (String type, EntityLivingBase entity) {
         
-        return (EntityList.getEntityString(entity).equalsIgnoreCase(type));
+        if (entity == null)
+            return false;
+            
+        String name = EntityList.getEntityString(entity);
+        
+        if (name == null)
+            return false;
+            
+        return (name.equalsIgnoreCase(type));
     }
     
     public static List<String> generateTooltip (String string, List<String> list) {
