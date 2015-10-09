@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.darkhax.nec.common.ProxyCommon;
 import net.darkhax.nec.handler.ConfigurationHandler;
 import net.darkhax.nec.handler.ForgeEventHandler;
+import net.darkhax.nec.handler.LootHandler;
 import net.darkhax.nec.items.ItemManager;
 import net.darkhax.nec.util.Constants;
 import net.minecraftforge.common.MinecraftForge;
