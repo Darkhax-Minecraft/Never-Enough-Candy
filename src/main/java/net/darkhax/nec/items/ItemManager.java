@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class ItemManager {
     
-    public HashMap<String, CandyType> candies = new HashMap<String, CandyType>();
+    public static HashMap<String, CandyType> candies = new HashMap<String, CandyType>();
     
     public ItemManager() {
     

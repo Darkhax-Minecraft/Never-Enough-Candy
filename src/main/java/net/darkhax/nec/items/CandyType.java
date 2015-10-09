@@ -9,6 +9,7 @@ public class CandyType {
     public float odds;
     public Class entityType;
     public boolean doesWolfLike;
+    public ItemCandy item;
     
     public CandyType(String name, int food, float odds, Class<? extends EntityLiving> entityType) {
         
