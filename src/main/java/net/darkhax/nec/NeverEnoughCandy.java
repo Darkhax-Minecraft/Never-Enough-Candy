@@ -25,6 +25,7 @@ public class NeverEnoughCandy {
         
         new ConfigurationHandler(pre.getSuggestedConfigurationFile());
         new ItemManager();
+        new LootHandler();
         MinecraftForge.EVENT_BUS.register(new ForgeEventHandler());
     }
 }
