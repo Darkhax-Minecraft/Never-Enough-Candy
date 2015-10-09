@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nec",
+  "name": "Never Enough Candy",
+  "description": "Adds some new sweets to the game!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Darkhax"],
+  "credits": "Code and Textures by Darkhax. Inspired by StacyPlays",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
