@@ -1,0 +1,15 @@
+#Never Enough Candy English Language File
+
+#Item Names
+item.nec.batty.name=Batty Bar
+item.nec.enderpop.name=Enderpop
+item.nec.skull.name=Gummy Skull
+item.nec.spider.name=Chocolate Spider Eye
+item.nec.witch.name=Bubblegum Witch
+
+#Descriptions
+tooltip.nec.batty.description=The taste will drive you batty!
+tooltip.nec.enderpop.description=How many licks does it take to get to the center of an Enderpop?
+tooltip.nec.skull.description=It's tougher than it looks.
+tooltip.nec.spider.description=It's rather crunchy...
+tooltip.nec.witch.description=The flavor is bewitching!
