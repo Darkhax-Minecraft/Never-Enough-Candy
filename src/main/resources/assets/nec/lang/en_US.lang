@@ -1,6 +1,7 @@
 #Never Enough Candy English Language File
 
 #Item Names
+item.nec.bean.name=Darky Park's Every Flavour Bean
 item.nec.cookie.name=Cookie
 item.nec.batty.name=Batty Bar
 item.nec.enderpop.name=Enderpop
@@ -13,6 +14,7 @@ item.nec.witchy.name=Witchy Candy
 item.nec.corn.name=Candy Corn
 
 #Descriptions
+tooltip.nec.bean.description=You want to be careful with these. When they say every flavour, they mean every flavour.
 tooltip.nec.playercookie.description=Baked with love for
 tooltip.nec.batty.description=The taste will drive you batty!
 tooltip.nec.enderpop.description=How many licks does it take to get to the center of an Enderpop?
@@ -23,3 +25,7 @@ tooltip.nec.halloween.description=A festively wrapped candy.
 tooltip.nec.midnight.description=The wrapper sparkles like the midnight sky.
 tooltip.nec.witchy.description=The wrapper resembles a traditional witch.
 tooltip.nec.corn.description=Is Candy Corn a vegetable?
+
+#Chat
+chat.nec.bad=Yuck!
+chat.nec.good=Tasty!
