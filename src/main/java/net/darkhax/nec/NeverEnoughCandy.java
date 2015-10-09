@@ -5,7 +5,6 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.darkhax.nec.common.ProxyCommon;
-import net.darkhax.nec.handler.ConfigurationHandler;
 import net.darkhax.nec.util.Constants;
 
 @Mod(modid = Constants.MOD_ID, name = Constants.MOD_NAME, version = Constants.VERSION_NUMBER, guiFactory = Constants.FACTORY)
@@ -19,6 +18,6 @@ public class NeverEnoughCandy {
     
     @EventHandler
     public void preInit (FMLPreInitializationEvent pre) {
-
+    
     }
 }
