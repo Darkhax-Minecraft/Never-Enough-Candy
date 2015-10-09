@@ -1,10 +1,11 @@
 package net.darkhax.nec.items;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemManager {
     
-    public static HashMap<String, CandyType> candies = new HashMap<String, CandyType>();
+    public static List<CandyType> candies = new ArrayList<CandyType>();
     
     public ItemManager() {
     

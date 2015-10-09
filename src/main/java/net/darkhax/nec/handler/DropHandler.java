@@ -13,7 +13,7 @@ public class DropHandler {
     @SubscribeEvent
     public void onDropsProcessed (LivingDropsEvent event) {
         
-        for (CandyType type : ItemManager.candies.values()) {
+        for (CandyType type : ItemManager.candies) {
             
             if (event.entityLiving.getClass().isAssignableFrom(type.entityType)) {
                 
