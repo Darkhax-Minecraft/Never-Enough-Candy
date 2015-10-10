@@ -23,8 +23,8 @@ buildscript {
 apply plugin: 'forge'
 
 version = "1.0.0"
-group = "net.darkhax.additionalenchantments"
-archivesBaseName = "additionalenchantments"
+group = "net.darkhax.nec"
+archivesBaseName = "NeverEnoughCandy"
 
 minecraft {
 
