@@ -18,10 +18,10 @@ public class LootHandler {
         for (String location : locations) {
             
             for (CandyType type : ItemManager.candies)
-                ChestGenHooks.addItem(location, new WeightedRandomChestContent(new ItemStack(type.item), 5, 1, 3));
+                ChestGenHooks.addItem(location, new WeightedRandomChestContent(new ItemStack(type.item), 1, 3, 5));
                 
             for (Map.Entry<String, ItemPlayerCookie> entry : ItemManager.cookies.entrySet())
-                ChestGenHooks.addItem(location, new WeightedRandomChestContent(new ItemStack(entry.getValue()), 2, 1, 1));
+                ChestGenHooks.addItem(location, new WeightedRandomChestContent(new ItemStack(entry.getValue()), 1, 1, 2));
         }
     }
 }
