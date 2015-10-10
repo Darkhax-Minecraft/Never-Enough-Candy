@@ -35,7 +35,7 @@ public class ItemManager {
             GameRegistry.registerItem(type.item, type.name);
         }
         
-        String[] playerNames = new String[] { "darkhax", "lclc98", "stacyplays", "stampylonghead", "subaraki" };
+        String[] playerNames = new String[] { "darkhax", "lclc98", "stacyplays", "stampylonghead", "subaraki", "graser10", "aaron", "kiera" };
         
         for (String name : playerNames) {
             
