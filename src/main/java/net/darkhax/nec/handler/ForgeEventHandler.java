@@ -20,7 +20,7 @@ public class ForgeEventHandler {
         
         if (Utilities.tryPercentage(0.01f))
             event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, ItemBeans.generateBean()));
-        
+            
         if (event.entityLiving instanceof EntityPlayerMP)
             for (Map.Entry<String, ItemPlayerCookie> entry : ItemManager.cookies.entrySet())
                 if (((EntityPlayerMP) event.entityLiving).getCommandSenderName().equalsIgnoreCase(entry.getKey())) {
@@ -28,7 +28,7 @@ public class ForgeEventHandler {
                     event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(entry.getValue())));
                     return;
                 }
-                    
+                
         for (CandyType type : ItemManager.candies)
             if (type.type.equalsIgnoreCase("any") || Utilities.isSameEntity(type.type, event.entityLiving))
                 if (Utilities.tryPercentage(type.odds + (0.05f * event.lootingLevel)) && type.item != null) {
