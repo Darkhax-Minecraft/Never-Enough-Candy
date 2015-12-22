@@ -1,0 +1,7 @@
+{
+  "parent": "nec:item/default",
+  "textures": {
+    "layer0": "nec:items/bean",
+    "layer1": "nec:items/bean_overlay"
+  }
+}
