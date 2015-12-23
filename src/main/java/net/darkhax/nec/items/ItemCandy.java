@@ -1,9 +1,5 @@
 package net.darkhax.nec.items;
 
-import java.util.List;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.darkhax.nec.util.Utilities;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,6 +7,10 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.StatCollector;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.List;
 
 public class ItemCandy extends ItemFood {
     
@@ -22,7 +22,6 @@ public class ItemCandy extends ItemFood {
         this.type = type;
         this.setUnlocalizedName("nec." + type.name);
         this.setCreativeTab(CreativeTabs.tabFood);
-        this.setTextureName("nec:candy_" + type.name);
         this.setPotionEffect(Potion.moveSpeed.getId(), 100, 1, 1.0f);
         this.setAlwaysEdible();
     }

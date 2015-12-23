@@ -1,0 +1,6 @@
+{
+  "parent": "nec:item/default",
+  "textures": {
+    "layer0": "nec:items/candy_batty"
+  }
+}

@@ -1,8 +1,5 @@
 package net.darkhax.nec.handler;
 
-import java.util.Map;
-
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.darkhax.nec.items.CandyType;
 import net.darkhax.nec.items.ItemBeans;
 import net.darkhax.nec.items.ItemManager;
@@ -12,6 +9,9 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import java.util.Map;
 
 public class ForgeEventHandler {
     

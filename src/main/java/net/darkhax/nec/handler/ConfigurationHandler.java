@@ -1,14 +1,14 @@
 package net.darkhax.nec.handler;
 
-import java.io.File;
-
-import cpw.mods.fml.client.event.ConfigChangedEvent;
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.darkhax.nec.items.CandyType;
 import net.darkhax.nec.items.ItemManager;
 import net.darkhax.nec.util.Constants;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import java.io.File;
 
 public class ConfigurationHandler {
     
@@ -17,7 +17,7 @@ public class ConfigurationHandler {
     public ConfigurationHandler(File configFile) {
         
         config = new Configuration(configFile);
-        FMLCommonHandler.instance().bus().register(this);
+        MinecraftForge.EVENT_BUS.register(this);
     }
     
     @SubscribeEvent

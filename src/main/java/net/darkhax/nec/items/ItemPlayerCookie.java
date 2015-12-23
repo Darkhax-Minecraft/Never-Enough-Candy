@@ -1,9 +1,5 @@
 package net.darkhax.nec.items;
 
-import java.util.List;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.darkhax.nec.util.Utilities;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,6 +9,10 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.List;
 
 public class ItemPlayerCookie extends ItemFood {
     
@@ -24,7 +24,6 @@ public class ItemPlayerCookie extends ItemFood {
         this.name = name;
         this.setUnlocalizedName("nec.cookie");
         this.setCreativeTab(CreativeTabs.tabFood);
-        this.setTextureName("nec:cookie_" + name);
         this.setAlwaysEdible();
     }
     
