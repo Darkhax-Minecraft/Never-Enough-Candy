@@ -27,12 +27,16 @@ apply plugin: 'com.matthewprenger.cursegradle'
 apply plugin: 'maven-publish' 
 
 apply from: 'https://raw.githubusercontent.com/MinecraftModDevelopment/Gradle-Collection/master/generic/secrets.gradle'
-apply from: 'https://raw.githubusercontent.com/MinecraftModDevelopment/Gradle-Collection/master/generic/patreon.gradle'
 apply from: 'https://raw.githubusercontent.com/MinecraftModDevelopment/Gradle-Collection/master/generic/markdown-git-changelog.gradle'
 apply from: 'https://raw.githubusercontent.com/MinecraftModDevelopment/Gradle-Collection/master/minecraft/artifacts.gradle'
 apply from: 'https://raw.githubusercontent.com/MinecraftModDevelopment/Gradle-Collection/master/minecraft/maven.gradle'
+apply from: 'https://raw.githubusercontent.com/MinecraftModDevelopment/Gradle-Collection/master/generic/patreon.gradle'
 
-loadSecrets()
+if (project.hasProperty('secretFile')) {
+
+    loadSecrets(new File((String) findProperty('secretFile')))
+}
+
 version = "${mod_version}" + getBuildNumber()
 group = "${mod_group}"
 archivesBaseName = "${mod_name}-${version_minecraft}"
@@ -51,19 +55,6 @@ minecraft {
     replaceIn "${mod_class}.java"
 }
 
-repositories {
-
-    maven {
-
-        url 'https://maven.mcmoddev.com'
-    }
-}
-
-dependencies {
-
-    deobfCompile "net.darkhax.bookshelf:Bookshelf-1.12.2:${version_bookshelf}"
-}
-
 processResources {
 
     inputs.property "version", project.version
@@ -79,9 +70,30 @@ processResources {
     
         exclude 'mcmod.info'
     }
-    
-    from 'LICENSE'
+
+    rename '(.+_at.cfg)', 'META-INF/$1'
 }
+
+repositories {
+
+    maven {
+
+        url "http://maven.mcmoddev.com"
+    }
+}
+
+dependencies {
+
+    deobfProvided "net.darkhax.bookshelf:Bookshelf-1.12.2:${version_bookshelf}"
+}
+
+jar {
+
+    manifest {
+ 	
+ 	    attributes 'FMLAT': 'bookshelf_at.cfg'
+ 	}
+ }
 
 String getBuildNumber() {
 
@@ -102,7 +114,7 @@ if (JavaVersion.current().isJava8Compatible()) {
 
 curseforge {
 
-    apiKey = findProperty('curse_auth') ?: 0 
+    apiKey = findProperty('curse_auth') ?: 0
     def versions = "${curse_versions}".split(', ')
 
     project {

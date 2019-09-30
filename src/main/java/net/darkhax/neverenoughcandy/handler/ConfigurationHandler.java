@@ -1,8 +1,8 @@
-package net.darkhax.nec.handler;
+package net.darkhax.neverenoughcandy.handler;
 
 import java.io.File;
 
-import net.darkhax.nec.items.ItemCandy.CandyType;
+import net.darkhax.neverenoughcandy.items.ItemCandy.CandyType;
 import net.minecraftforge.common.config.Configuration;
 
 public class ConfigurationHandler {

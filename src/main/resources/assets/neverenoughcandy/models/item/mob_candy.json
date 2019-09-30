@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "neverenoughcandy:items/mob_candy",
+    "layer1": "neverenoughcandy:items/mob_candy_overlay"
+  }
+}

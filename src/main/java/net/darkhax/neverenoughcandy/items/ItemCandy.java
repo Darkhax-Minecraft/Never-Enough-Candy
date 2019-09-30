@@ -1,4 +1,4 @@
-package net.darkhax.nec.items;
+package net.darkhax.neverenoughcandy.items;
 
 import java.util.List;
 
@@ -42,11 +42,11 @@ public class ItemCandy extends ItemFood implements IVariant {
     }
 
     @Override
-    public String getUnlocalizedName (ItemStack stack) {
+    public String getTranslationKey (ItemStack stack) {
 
         final int meta = stack.getMetadata();
         final String[] variants = this.getVariant();
-        return (super.getUnlocalizedName() + "." + this.getPrefix() + (!(meta >= 0 && meta < variants.length) ? variants[0] : variants[meta])).replace("_", ".");
+        return (super.getTranslationKey() + "." + this.getPrefix() + (!(meta >= 0 && meta < variants.length) ? variants[0] : variants[meta])).replace("_", ".");
     }
 
     @Override
@@ -90,33 +90,15 @@ public class ItemCandy extends ItemFood implements IVariant {
 
     public enum CandyType {
 
-        HALLOWEEN("halloween", (entity) -> {
-            return true;
-        }),
-        WITCHY("witchy", (entity) -> {
-            return true;
-        }),
-        MIDNIGHT("midnight", (entity) -> {
-            return true;
-        }),
-        BATTY("batty", (entity) -> {
-            return entity instanceof EntityBat;
-        }),
-        CORN("corn", 1f, (entity) -> {
-            return entity instanceof EntityVillager;
-        }),
-        ENDERPOP("enderpop", (entity) -> {
-            return entity instanceof EntityEnderman;
-        }),
-        SKULL("skull", (entity) -> {
-            return entity instanceof AbstractSkeleton;
-        }),
-        SPIDER("spider", (entity) -> {
-            return entity instanceof EntitySpider;
-        }),
-        WITCH("witch", (entity) -> {
-            return entity instanceof EntityWitch;
-        });
+        HALLOWEEN("halloween", e -> true),
+        WITCHY("witchy", e -> true),
+        MIDNIGHT("midnight", e -> true),
+        BATTY("batty", e -> e instanceof EntityBat),
+        CORN("corn", 1f, e -> e instanceof EntityVillager),
+        ENDERPOP("enderpop", e -> e instanceof EntityEnderman),
+        SKULL("skull", e -> e instanceof AbstractSkeleton),
+        SPIDER("spider", e -> e instanceof EntitySpider),
+        WITCH("witch", e -> e instanceof EntityWitch);
 
         public static int metaTicker = 0;
 

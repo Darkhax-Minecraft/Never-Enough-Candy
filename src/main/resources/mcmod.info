@@ -1,16 +1,23 @@
-[
-{
-  "modid": "nec",
-  "name": "Never Enough Candy",
-  "description": "Adds some new sweets to the game!",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["Darkhax"],
-  "credits": "Code and Textures by Darkhax. Inspired by StacyPlays",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+[  
+   {  
+      "modid":"neverenoughcandy",
+      "name":"Never Enough Candy",
+      "description":"You can never have enough candy!",
+      "version":"${version}",
+      "mcversion":"${mcversion}",
+      "url":"https://www.curseforge.com/minecraft/mc-mods/never-enough-candy",
+      "updateUrl":"",
+      "authorList":[  
+         "Darkhax"
+      ],
+      "credits":"",
+      "logoFile":"",
+      "screenshots":[  
+
+      ],
+      "parent":"",
+      "dependencies":[  
+
+      ]
+   }
 ]
