@@ -1,8 +1,5 @@
 package net.darkhax.neverenoughcandy;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import net.darkhax.bookshelf.registry.RegistryHelper;
 import net.darkhax.bookshelf.util.EntityUtils;
 import net.darkhax.bookshelf.util.MathsUtils;
@@ -12,7 +9,6 @@ import net.darkhax.neverenoughcandy.items.ItemCandy;
 import net.darkhax.neverenoughcandy.items.ItemCandy.CandyType;
 import net.darkhax.neverenoughcandy.items.ItemMobCandy;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.item.Item;
@@ -31,7 +27,16 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @EventBusSubscriber(modid = "neverenoughcandy")
 public class NeverEnoughCandy {
 
-    public static RegistryHelper REGISTRY = new RegistryHelper("neverenoughcandy").setTab(CreativeTabs.FOOD).enableAutoRegistration();
+	public static CreativeTabs tab = new CreativeTabs("neverenoughcandy") {
+
+		@Override
+		public ItemStack createIcon() {
+			
+			return new ItemStack(itemCandy, 1, 4);
+		}
+	};
+	
+    public static RegistryHelper REGISTRY = new RegistryHelper("neverenoughcandy").setTab(tab).enableAutoRegistration();
 
     public static Item itemBeans;
     private static Item itemCandy;
@@ -41,9 +46,8 @@ public class NeverEnoughCandy {
     public void preInit (FMLPreInitializationEvent event) {
 
         new ConfigurationHandler(event.getSuggestedConfigurationFile());
-
-        itemBeans = REGISTRY.registerItem(new ItemBeans(), "magic_bean");
         itemCandy = REGISTRY.registerItem(new ItemCandy(), "candy");
+        itemBeans = REGISTRY.registerItem(new ItemBeans(), "magic_bean");
         itemMobCandy = REGISTRY.registerItem(new ItemMobCandy(), "mob_candy");
         ConfigurationHandler.save();
     }
