@@ -2,7 +2,6 @@ package net.darkhax.neverenoughcandy.items;
 
 import net.darkhax.bookshelf.util.StackUtils;
 import net.darkhax.neverenoughcandy.NeverEnoughCandy;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
@@ -13,6 +12,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.translation.I18n;
 
 public class ItemMobCandy extends ItemFood {
 	
@@ -36,14 +36,14 @@ public class ItemMobCandy extends ItemFood {
     }
     
     @Override
-    public String getItemStackDisplayName(ItemStack stack)
-    {
-        String s = ("" + I18n.format(this.getTranslationKey() + ".name")).trim();
+    public String getItemStackDisplayName(ItemStack stack) {
+    	
+        String s = ("" + I18n.translateToLocal(this.getTranslationKey() + ".name")).trim();
         String s1 = EntityList.getTranslationName(getMobInfo(stack));
 
-        if (s1 != null)
-        {
-            s = I18n.format("entity." + s1 + ".name") + " " + s;
+        if (s1 != null) {
+        	
+            s = I18n.translateToLocal("entity." + s1 + ".name") + " " + s;
         }
 
         return s;
