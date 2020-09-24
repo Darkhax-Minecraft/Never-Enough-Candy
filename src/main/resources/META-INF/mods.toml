@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[34,)"
+issueTrackerURL="https://github.com/Darkhax-Minecraft/never-enough-candy/issues"
+license="LGPL v2.1 (Textures ARR)"
+
+[[mods]]
+modId="neverenoughcandy"
+updateJSONURL="https://updates.blamejared.com/get?n=neverenoughcandy&gv=1.16.3"
+version="${version}"
+displayName="${mod_name}"
+displayURL="${mod_download}"
+credits="${mod_credits}"
+authors="${mod_authors}"
+description='''
+${mod_description}
+'''
+
+[[dependencies.neverenoughcandy]]
+    modId="forge"
+    mandatory=true
+    versionRange="[34,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.neverenoughcandy]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.3]"
+    ordering="NONE"
+    side="BOTH"
+	
+[[dependencies.neverenoughcandy]]
+    modId="bookshelf"
+    mandatory=true
+    versionRange="[8,)"
+    ordering="AFTER"
+    side="BOTH"
