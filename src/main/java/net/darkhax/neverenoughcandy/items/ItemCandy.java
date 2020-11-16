@@ -27,7 +27,7 @@ public class ItemCandy extends Item {
     public ItemCandy(String type) {
         
         super(props);
-        this.tooltip = new TranslationTextComponent("tooltip.neverenoughcandy." + type + ".description").func_240701_a_(TextFormatting.DARK_PURPLE);
+        this.tooltip = new TranslationTextComponent("tooltip.neverenoughcandy." + type + ".description").mergeStyle(TextFormatting.DARK_PURPLE);
     }
     
     @Override

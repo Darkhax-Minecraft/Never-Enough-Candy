@@ -68,7 +68,7 @@ public class ItemMobCandy extends Item {
                 
                 if (entName instanceof IFormattableTextComponent) {
                     
-                    entName = ((IFormattableTextComponent) entName).func_240699_a_(TextFormatting.GOLD);
+                    entName = ((IFormattableTextComponent) entName).mergeStyle(TextFormatting.GOLD);
                 }
                 
                 tooltips.add(new TranslationTextComponent("tooltip.neverenoughcandy.mob.desc", entName));
