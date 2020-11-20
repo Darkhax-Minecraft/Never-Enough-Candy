@@ -7,7 +7,6 @@ import net.darkhax.bookshelf.Bookshelf;
 import net.darkhax.bookshelf.item.ItemGroupBase;
 import net.darkhax.bookshelf.registry.RegistryHelper;
 import net.darkhax.bookshelf.util.MathsUtils;
-import net.darkhax.bookshelf.util.SidedExecutor;
 import net.darkhax.neverenoughcandy.items.ItemBeans;
 import net.darkhax.neverenoughcandy.items.ItemCandy;
 import net.darkhax.neverenoughcandy.items.ItemMobCandy;
@@ -24,8 +23,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(NeverEnoughCandy.MOD_ID)
@@ -67,8 +66,7 @@ public class NeverEnoughCandy {
         
         this.registry.initialize(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.addListener(this::onLivingDrops);
-        
-        SidedExecutor.runOnSide(LogicalSide.CLIENT, () -> () -> FMLJavaModLoadingContext.get().getModEventBus().addListener(this::addItemColors));
+        MinecraftForge.EVENT_BUS.addListener(this::setupClient);
     }
     
     private void onLivingDrops (LivingDropsEvent event) {
@@ -150,6 +148,11 @@ public class NeverEnoughCandy {
         drop.setItem(item);
         drop.setPositionAndUpdate(living.getPosX(), living.getPosY(), living.getPosZ());
         event.getDrops().add(drop);
+    }
+    
+    private void setupClient (FMLClientSetupEvent event) {
+        
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::addItemColors);
     }
     
     private void addItemColors (ColorHandlerEvent.Item event) {
