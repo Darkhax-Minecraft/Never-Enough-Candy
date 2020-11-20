@@ -74,8 +74,7 @@ public class NeverEnoughCandy {
     private void onLivingDrops (LivingDropsEvent event) {
         
         final LivingEntity entity = event.getEntityLiving();
-        System.out.println("hi " + entity);
-        final float looting = event.getLootingLevel() + 1;
+        final float looting = event.getLootingLevel() + 1f;
         
         // Specialized Mob Candy
         if (entity instanceof BatEntity && MathsUtils.tryPercentage(0.05f * looting)) {
