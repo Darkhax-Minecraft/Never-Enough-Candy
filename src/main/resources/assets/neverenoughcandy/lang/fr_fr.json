@@ -1,0 +1,34 @@
+{
+    "itemGroup.neverenoughcandy": "Never Enough Candy",
+
+    "_comment": "Item Names",
+    "item.neverenoughcandy.jelly_bean": "Harricot boozle",
+    "item.neverenoughcandy.candy_batty": "Bat-barre",
+    "item.neverenoughcandy.candy_corn": "Bonbon de maïs",
+    "item.neverenoughcandy.candy_enderpop": "Enderpop",
+    "item.neverenoughcandy.candy_halloween": "Bonbon emballé",
+    "item.neverenoughcandy.candy_midnight": "Bonbon emballé",
+    "item.neverenoughcandy.candy_skull": "Crâne de gelée",
+    "item.neverenoughcandy.candy_spider": "Oeil d'araignée au beurre de cacahuètes",
+    "item.neverenoughcandy.candy_witch": "Sorcière en gomme",
+    "item.neverenoughcandy.candy_witchy": "Bonbon emballé",
+    "item.neverenoughcandy.mob_candy": "Bonbon de monstre",
+
+    "_comment": "Mob Candy Descriptions",
+    "tooltip.neverenoughcandy.midnight.description": "L'emballage scintille comme le ciel de minuit.",
+    "tooltip.neverenoughcandy.halloween.description": "Un bonbon emballé de façon festive.",
+    "tooltip.neverenoughcandy.witchy.description": "L'emballage ressemble à une sorcière.",
+    "tooltip.neverenoughcandy.bean.description": "Il faut faire attention. Quand ils disent tous les goûts, ils veulent dire tous les goûts.",
+    "tooltip.neverenoughcandy.playercookie.description": "Fait avec amour pour",
+    "tooltip.neverenoughcandy.batty.description": "Un goût à rendre fou!",
+    "tooltip.neverenoughcandy.enderpop.description": "Combien de fois faut-il lêcher un enderpop pour arriver au milieu ?",
+    "tooltip.neverenoughcandy.skull.description": "Plus dur qu'il n'en a l'air.",
+    "tooltip.neverenoughcandy.spider.description": "Plutôt croustillant...",
+    "tooltip.neverenoughcandy.witch.description": "Une saveur ensorcellante !",
+    "tooltip.neverenoughcandy.corn.description": "Est-ce que ça compte comme légume ?",
+    "tooltip.neverenoughcandy.mob.desc": "Type : %s",
+
+    "_comment": "Chat",
+    "chat.neverenoughcandy.effect.bad": "%sBeurk !",
+    "chat.neverenoughcandy.effect.good": "%sDélicieux !"
+}
