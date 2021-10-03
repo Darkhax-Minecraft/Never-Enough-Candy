@@ -1,0 +1,36 @@
+{
+    "_comment": "Never Enough Candy deutsche Sprachdatei",
+
+    "itemGroup.neverenoughcandy": "Never Enough Candy",
+
+    "_comment": "Item Names",
+    "item.neverenoughcandy.jelly_bean": "Geleebohne",
+    "item.neverenoughcandy.candy_batty": "Fledermausriegel",
+    "item.neverenoughcandy.candy_corn": "Maissüßigkeit",
+    "item.neverenoughcandy.candy_enderpop": "Enderpop",
+    "item.neverenoughcandy.candy_halloween": "Eingewickelte Süßigkeit",
+    "item.neverenoughcandy.candy_midnight": "Eingewickelte Süßigkeit",
+    "item.neverenoughcandy.candy_skull": "Gummischädel",
+    "item.neverenoughcandy.candy_spider": "Erdnussbutter Spinnenauge",
+    "item.neverenoughcandy.candy_witch": "Kaugummihexe",
+    "item.neverenoughcandy.candy_witchy": "Eingewickelte Süßigkeit",
+    "item.neverenoughcandy.mob_candy": "Monstersüßigkeit",
+
+    "_comment": "Mob Candy Descriptions",
+    "tooltip.neverenoughcandy.midnight.description": "Die Verpackung funkelt wie der Mitternachtshimmel.",
+    "tooltip.neverenoughcandy.halloween.description": "Eine festlich eingepackte Süßigkeit.",
+    "tooltip.neverenoughcandy.witchy.description": "Die Verpackung ähnelt einer traditionellen Hexe.",
+    "tooltip.neverenoughcandy.bean.description": "Du solltest mit dieser Süßigkeit vorsichtig sein. Wenn dort jede Geschmacksrichtung steht, dann ist auch jede Geschmacksrichtung gemeint.",
+    "tooltip.neverenoughcandy.playercookie.description": "Mit Liebe gebacken für",
+    "tooltip.neverenoughcandy.batty.description": "Der Geschmack wird dich verrückt machen!",
+    "tooltip.neverenoughcandy.enderpop.description": "Wie oft musst ein Enderpop geschleckt werden, um zur Mitte zu gelangen?",
+    "tooltip.neverenoughcandy.skull.description": "Es ist härter als es aussieht.",
+    "tooltip.neverenoughcandy.spider.description": "Es ist ziemlich knusprig...",
+    "tooltip.neverenoughcandy.witch.description": "Der Geschmack ist bezaubernd!",
+    "tooltip.neverenoughcandy.corn.description": "Ist eine Maissüßigkeit ein Gemüse?",
+    "tooltip.neverenoughcandy.mob.desc": "Typ: %s",
+
+    "_comment": "Chat",
+    "chat.neverenoughcandy.effect.bad": "%sIgitt!",
+    "chat.neverenoughcandy.effect.good": "%sLecker!"
+}
